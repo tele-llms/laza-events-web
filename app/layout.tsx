@@ -28,14 +28,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://laza-events-web.vercel.app'), // Replace with your production domain
+  metadataBase: new URL('https://lazaevent.com'),
   title: {
     default: "Laza Events | Qatar's Premier Luxury Event Management",
     template: "%s | Laza Events Qatar"
   },
-  description: "Bringing Your Vision to Life. Exceptional Corporate Events, Weddings, Stage Shows & Celebrations in Doha, Qatar. Full-service event planning and management.",
-  keywords: ["event management qatar", "wedding planner doha", "corporate events qatar", "stage show qatar", "event rentals qatar", "laza events"],
-  authors: [{ name: "Laza Events Team" }],
+  description: "Laza Events is Qatar's premier luxury event management company. We specialize in bespoke weddings, corporate conferences, stage shows, community events, and premium furniture rentals in Doha. Create unforgettable experiences with the best event planners in Qatar.",
+  keywords: [
+    "event management qatar", 
+    "luxury wedding planner doha", 
+    "corporate event organizer qatar", 
+    "stage show production qatar", 
+    "event furniture rental qatar", 
+    "best event company doha", 
+    "laza events qatar", 
+    "conference management qatar", 
+    "exhibition stand builder qatar", 
+    "party planner qatar", 
+    "vip event services doha",
+    "sound and light rental qatar",
+    "led screen rental qatar",
+    "wedding decoration qatar",
+    "product launch event qatar",
+    "award ceremony organizer qatar"
+  ],
+  authors: [{ name: "Laza Events Team", url: "https://lazaevent.com" }],
+  category: "Event Management",
   creator: "Laza Events",
   publisher: "Laza Events",
   formatDetection: {
@@ -46,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Laza Events | Premier Event Management in Qatar",
     description: "Exceptional event planning for corporate, weddings, and celebrations in Qatar.",
-    url: 'https://laza-events-web.vercel.app',
+    url: 'https://lazaevent.com',
     siteName: 'Laza Events',
     images: [
       {
@@ -89,7 +107,48 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "EventPlanner",
+    "name": "Laza Events Qatar",
+    "alternateName": "Laza Events Doha",
+    "url": "https://lazaevent.com",
+    "logo": "https://lazaevent.com/logo-web.png",
+    "image": "https://lazaevent.com/images/og-image.png",
+    "description": "Qatar's premier luxury event management company, specializing in weddings, corporate events, and stage shows.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Doha",
+      "addressCountry": "QA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.2854,
+      "longitude": 51.5310
+    },
+    "telephone": "+97470694883",
+    "email": "info@lazaevent.com",
+    "priceRange": "$$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": [
+      "https://instagram.com/laza_events_official",
+      "https://facebook.com/lazaevents"
+    ]
+  };export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -97,6 +156,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nunitoSans.variable} ${poppins.variable} ${inter.variable} font-sans antialiased bg-white text-gray-900 relative`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

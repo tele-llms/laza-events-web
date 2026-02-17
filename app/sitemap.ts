@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://laza-events-web.vercel.app' // Replace with your custom domain if you have one
+  const baseUrl = 'https://lazaevent.com' // Replace with your custom domain if you have one
 
   return [
     {

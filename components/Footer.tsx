@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block">
-              <Image src="/logo.png" alt="Laza Events" width={140} height={42} className="h-10 w-auto" />
+              <Image src="/logo-footer.png" alt="Laza Events" width={140} height={42} className="h-14 w-auto object-contain" />
             </Link>
             <p className="mt-5 text-gray-400 leading-relaxed text-sm">
               Premium event management in Qatar — from corporate conferences and weddings to live shows and community celebrations.
