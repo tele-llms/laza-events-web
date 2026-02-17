@@ -1,26 +1,265 @@
 @import "tailwindcss";
 
 :root {
+  /* Brand palette (refined) */
+  --brand-purple: #7C5AAE;
+  --brand-purple-dark: #5E3D8F;
+  --brand-purple-light: #9B7DC9;
+  --brand-purple-50: #F5F1FB;
+  --brand-gold: #C9A962;
+  --brand-gold-light: #E8D9A8;
+
+  /* App palette */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a2e;
+  --muted: #64748b;
+  --border: #e2e8f0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 body {
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1.65;
+  position: relative;
+}
+
+/* Purple and White Accent Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    /* Top right purple gradient blob - more visible */
+    radial-gradient(ellipse 600px 600px at calc(100% - 100px) 100px, rgba(124, 90, 174, 0.25) 0%, rgba(124, 90, 174, 0.1) 30%, transparent 60%),
+    /* Bottom left purple gradient blob */
+    radial-gradient(ellipse 500px 500px at 50px calc(100% - 100px), rgba(124, 90, 174, 0.2) 0%, rgba(124, 90, 174, 0.08) 30%, transparent 60%),
+    /* Top left accent */
+    radial-gradient(circle 300px at 100px 300px, rgba(155, 125, 201, 0.15) 0%, transparent 60%),
+    /* Bottom right accent */
+    radial-gradient(circle 350px at calc(100% - 150px) calc(100% - 200px), rgba(155, 125, 201, 0.12) 0%, transparent 60%),
+    /* Base white */
+    #ffffff;
+}
+
+/* Smoother default transitions */
+*, *::before, *::after {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Headings - Nunito Sans Bold (Proxima Nova alternative) */
+.font-display {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+/* Subheadings - Poppins SemiBold (Metropolis alternative) */
+.font-sub {
+  font-family: var(--font-subheading), sans-serif;
+  font-weight: 600;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-subheading), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-purple);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-purple-dark);
+}
+
+::selection {
+  background: rgba(107, 76, 154, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--brand-purple) 0%, var(--brand-purple-dark) 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(124, 90, 174, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(124, 90, 174, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--foreground);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--border);
+  background: white;
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline-dark:hover {
+  border-color: var(--brand-purple);
+  color: var(--brand-purple);
+  transform: translateY(-2px);
+}
+
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img, .img-zoom > div {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.img-zoom:hover img, .img-zoom:hover > div {
+  transform: scale(1.08);
+}
+
+/* Subtle divider */
+.divider {
+  height: 1px;
+  background: var(--border);
+}
+
+/* Client logos marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Instagram Reels infinite scroll - right to left */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 60s linear infinite;
+}
+
+.animate-scroll-left:hover {
+  animation-play-state: paused;
 }
