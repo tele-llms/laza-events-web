@@ -381,7 +381,7 @@ export default function Home() {
       </section>
 
       {/* Clients Marquee */}
-      <section className="py-20 border-y border-gray-100 bg-[#fafafa] overflow-hidden">
+      <section className="py-20 border-y border-gray-100 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center gap-4 mb-12">
             <span className="h-px w-12 bg-[var(--brand-purple)]/30" />
