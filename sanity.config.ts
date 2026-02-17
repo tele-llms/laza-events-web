@@ -6,7 +6,7 @@ import { schema } from './sanity/schema'
 
 export default defineConfig({
   basePath: '/studio',
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'your-project-id',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'f69fcuq2',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   title: 'Laza Events Portfolio',
   plugins: [deskTool(), visionTool()],
