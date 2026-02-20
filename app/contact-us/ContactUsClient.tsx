@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 export default function ContactUsClient() {
@@ -8,18 +7,13 @@ export default function ContactUsClient() {
     <main className="bg-white pt-28">
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-2xl"
-          >
+          <div className="max-w-2xl">
             <div className="text-xs font-semibold tracking-[0.22em] uppercase text-[var(--brand-purple)]">Contact</div>
             <h1 className="mt-4 text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">Contact Details</h1>
             <p className="mt-4 text-gray-600">
               No forms. Just direct contact. Call, WhatsApp, or email us and we’ll respond quickly.
             </p>
-          </motion.div>
+          </div>
 
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
@@ -47,11 +41,8 @@ export default function ContactUsClient() {
                 desc: "Schedule a meeting with us"
               }
             ].map((item, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group"
               >
                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center group-hover:bg-[var(--brand-purple)] group-hover:text-white transition-colors duration-300">
@@ -62,7 +53,7 @@ export default function ContactUsClient() {
                   {item.info}
                 </div>
                 <p className="mt-1 text-gray-500 text-sm">{item.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
