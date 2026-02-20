@@ -7,8 +7,8 @@ import { ArrowRight, Award, Calendar, Users, Heart, Shield, Star, CheckCircle2, 
 import PageHeader from '@/components/PageHeader';
 
 const stats = [
-	{ number: '10+', label: 'Years of Excellence', icon: Calendar },
-	{ number: '500+', label: 'Events Executed', icon: PartyPopper },
+	{ number: '9+', label: 'Years of Excellence', icon: Calendar },
+	{ number: '300+', label: 'Events Executed', icon: PartyPopper },
 	{ number: '200+', label: 'Happy Clients', icon: Users },
 	{ number: '50+', label: 'Team Members', icon: Building2 },
 ];
@@ -134,7 +134,7 @@ export default function AboutUsClient() {
 							</div>
 							<div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[var(--brand-purple)] to-purple-700 p-5 rounded-2xl shadow-xl hidden lg:block">
 								<div className="text-white text-center">
-									<div className="text-3xl font-bold">500+</div>
+									<div className="text-3xl font-bold">300+</div>
 									<div className="text-sm text-white/80">Events Delivered</div>
 								</div>
 							</div>
@@ -214,7 +214,7 @@ export default function AboutUsClient() {
 							<Calendar className="text-white" size={20} />
 							<span className="text-base font-bold text-white uppercase tracking-wide">Our Journey</span>
 						</div>
-						<h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">A Decade of Excellence</h2>
+						<h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">9+ Years of Excellence</h2>
 						<p className="text-gray-600 text-lg max-w-2xl mx-auto">From humble beginnings to becoming Qatars leading event management company</p>
 					</motion.div>
 

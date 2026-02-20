@@ -352,8 +352,8 @@ export default function Home() {
                 className="flex items-center gap-10 sm:gap-14 mb-4"
               >
                 {[
-                  { value: 10, label: 'Years', suffix: '+' },
-                  { value: 500, label: 'Events', suffix: '+' },
+                  { value: 9, label: 'Years', suffix: '+' },
+                  { value: 300, label: 'Events', suffix: '+' },
                   { value: 200, label: 'Clients', suffix: '+' },
                 ].map((stat, i) => (
                   <div key={i} className="text-left">
@@ -422,7 +422,7 @@ export default function Home() {
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-[var(--brand-purple)] tracking-tight leading-[1.1]">About Us</h2>
                 <p className="mt-6 text-gray-600 leading-relaxed text-lg">
-                  At Laza Events, we bring your event vision to life with precision, creativity, and excellence. With over 10 years of experience in Qatar, our team of seasoned professionals is dedicated to delivering exceptional event solutions that exceed expectations.
+                  At Laza Events, we bring your event vision to life with precision, creativity, and excellence. With over 9 years of experience in Qatar, our team of seasoned professionals is dedicated to delivering exceptional event solutions that exceed expectations.
                 </p>
 
                 <div className="mt-10 flex flex-wrap gap-4">
