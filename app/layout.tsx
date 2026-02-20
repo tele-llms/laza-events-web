@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Nunito_Sans, Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Main Headings - Industry standard, refined (Proxima Nova alternative)
 const nunitoSans = Nunito_Sans({
@@ -161,6 +163,8 @@ export const metadata: Metadata = {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <LayoutWrapper>{children}</LayoutWrapper>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
