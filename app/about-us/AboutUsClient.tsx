@@ -45,6 +45,24 @@ const values = [
 	},
 ];
 
+const timeline = [
+	{
+		year: '9+ Years',
+		title: 'Of Excellence',
+		desc: 'Since 2017, we have been setting standards in event management.',
+	},
+	{
+		year: '300+',
+		title: 'Events Delivered',
+		desc: 'From corporate gatherings to grand weddings, we have done it all.',
+	},
+	{
+		year: 'Awards',
+		title: 'Industry Recognition',
+		desc: 'Honored with multiple awards and mementos for our outstanding service.',
+	},
+];
+
 const whyChooseUs = [
 	{ title: 'Local Expertise, Global Standards', desc: 'Deep understanding of Qatari culture combined with international best practices.', icon: Globe },
 	{ title: 'End-to-End Solutions', desc: 'From concept to cleanup, we handle every aspect of your event.', icon: CheckCircle2 },
@@ -180,10 +198,29 @@ export default function AboutUsClient() {
 							<span className="text-base font-bold text-white uppercase tracking-wide">Our Journey</span>
 						</div>
 						<h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">9+ Years of Excellence</h2>
-						<p className="text-gray-600 text-lg max-w-3xl mx-auto">
-							Throughout our journey, we have successfully conducted over 300 events, earning various awards and mementos along the way. While we continue to build our legacy, our commitment to excellence remains our guiding star.
-						</p>
+						<p className="text-gray-600 text-lg max-w-2xl mx-auto">From humble beginnings to becoming Qatars leading event management company</p>
 					</motion.div>
+
+					<div className="relative">
+						<div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-orange-500 hidden md:block" />
+						<div className="space-y-12">
+							{timeline.map((item, i) => (
+								<motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className={`flex items-center gap-8 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+									<div className={`flex-1 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+										<div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 inline-block max-w-md w-full">
+											<div className="text-lg font-bold text-[var(--brand-purple)] mb-2">{item.year}</div>
+											<h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+											<p className="text-gray-600">{item.desc}</p>
+										</div>
+									</div>
+									<div className="hidden md:flex w-12 h-12 bg-white border-4 border-[var(--brand-purple)] rounded-full items-center justify-center flex-shrink-0 z-10">
+										<div className="w-4 h-4 bg-[var(--brand-purple)] rounded-full" />
+									</div>
+									<div className="flex-1 hidden md:block" />
+								</motion.div>
+							))}
+						</div>
+					</div>
 				</div>
 			</section>
 
