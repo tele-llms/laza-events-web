@@ -26,7 +26,12 @@ export default function ContactUsClient() {
               {
                 icon: Phone,
                 title: "Call Us",
-                info: <a href="tel:+97470694883" className="hover:text-[var(--brand-purple)] transition-colors">+974 7069 4883</a>,
+                info: (
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+97470694883" className="hover:text-[var(--brand-purple)] transition-colors">+974 7069 4883</a>
+                    <a href="tel:+97466320397" className="hover:text-[var(--brand-purple)] transition-colors">+974 6632 0397</a>
+                  </div>
+                ),
                 desc: "Mon-Sat from 8am to 6pm"
               },
               {
@@ -80,7 +85,7 @@ export default function ContactUsClient() {
       {/* CTA Section */}
       <section className="py-24 bg-[var(--brand-purple)] text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8">Lets Create Something Extraordinary</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-8">Lets Plan Your Next Event</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+97470694883" className="btn-primary-white">
               Call Now

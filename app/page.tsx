@@ -133,7 +133,7 @@ const testimonials = [
     name: 'Sarah Al-Thani',
     role: 'Corporate Director, Qatar Energy',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
-    quote: 'Laza Events transformed our annual conference into an extraordinary experience. Their attention to detail and professionalism exceeded all expectations.',
+    quote: 'Laza Events transformed our annual conference into a highly successful experience. Their attention to detail and professionalism exceeded all expectations.',
     rating: 5,
   },
   {

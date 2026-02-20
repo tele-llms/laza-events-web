@@ -10,18 +10,17 @@ const stats = [
 	{ number: '9+', label: 'Years of Excellence', icon: Calendar },
 	{ number: '300+', label: 'Events Executed', icon: PartyPopper },
 	{ number: '200+', label: 'Happy Clients', icon: Users },
-	{ number: '50+', label: 'Team Members', icon: Building2 },
 ];
 
 const values = [
 	{
 		title: 'Precision',
-		desc: 'We believe that excellence lies in the details. Every element of your event is meticulously planned and executed to perfection.',
+		desc: 'We believe that quality lies in the details. Every element of your event is carefully planned and executed.',
 		image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
 	},
 	{
 		title: 'Passion',
-		desc: 'We love what we do, and it shows. Our energy and enthusiasm drive us to create extraordinary experiences that leave lasting impressions.',
+		desc: 'We love what we do, and it shows. Our energy and enthusiasm drive us to create memorable experiences that leave lasting impressions.',
 		image: 'https://images.unsplash.com/photo-1529543544277-750e7ea275c0?w=800&h=600&fit=crop',
 	},
 	{
@@ -81,7 +80,7 @@ const timeline = [
 
 const whyChooseUs = [
 	{ title: 'Local Expertise, Global Standards', desc: 'Deep understanding of Qatari culture combined with international best practices.', icon: Globe },
-	{ title: 'End-to-End Solutions', desc: 'From concept to cleanup, we handle every aspect of your event seamlessly.', icon: CheckCircle2 },
+	{ title: 'End-to-End Solutions', desc: 'From concept to cleanup, we handle every aspect of your event.', icon: CheckCircle2 },
 	{ title: 'Dedicated Project Managers', desc: 'A single point of contact who knows your event inside and out.', icon: Users },
 	{ title: '24/7 Support', desc: 'Round-the-clock availability during your event for complete peace of mind.', icon: Clock },
 	{ title: 'Premium Vendor Network', desc: 'Access to Qatars finest caterers, decorators, entertainers, and venues.', icon: Star },
@@ -106,15 +105,14 @@ export default function AboutUsClient() {
 					<div className="grid lg:grid-cols-2 gap-16 items-center">
 						<motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
 							<div className="inline-flex items-center gap-3 bg-[var(--brand-purple)] px-5 py-2.5 rounded-full mb-6">
-								<Sparkles className="text-white" size={20} />
 								<span className="text-base font-bold text-white uppercase tracking-wide">Our Story</span>
 							</div>
-							<h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">More Than Just Event Planners</h2>
+							<h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">Delivering High-Quality Event Experiences</h2>
 							<div className="space-y-5 text-gray-600 leading-relaxed text-lg">
-								<p>Founded in 2014, Laza Events began with a simple yet powerful vision: to transform how Qatar experiences events. What started as a passionate team of three has grown into a full-service event management powerhouse with over 50 dedicated professionals.</p>
-								<p>We understand that every event tells a story. Whether its a milestone corporate celebration, a fairytale wedding, an electrifying stage show, or a community festival that brings people together—our goal is to tell that story in the most compelling and memorable way possible.</p>
+								<p>Founded in 2014, Laza Events began with a clear goal: to deliver high-quality event experiences in Qatar. What started as a passionate team of three has grown into a full-service event management company.</p>
+								<p>We understand that every event is unique. Whether its a milestone corporate celebration, an elegant wedding, an engaging stage show, or a community festival that brings people together—our goal is to make it memorable and successful.</p>
 								<p>Our team combines deep local expertise with global standards, ensuring that every project is culturally resonant yet world-class in execution. Weve had the privilege of working with some of Qatars most prestigious organizations and individuals.</p>
-								<p>From the historic FIFA World Cup 2022 to intimate private gatherings, weve proven time and again that excellence knows no bounds when passion meets precision.</p>
+								<p>From the historic FIFA World Cup 2022 to intimate private gatherings, weve proven time and again that our strong commitment to quality makes a difference.</p>
 							</div>
 						</motion.div>
 
@@ -146,7 +144,7 @@ export default function AboutUsClient() {
 			{/* Stats Section */}
 			<section className="py-16 bg-gradient-to-br from-[var(--brand-purple)] via-purple-700 to-purple-900">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 						{stats.map((stat, i) => (
 							<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
 								<div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -179,7 +177,7 @@ export default function AboutUsClient() {
 							<div className="absolute inset-0 bg-gradient-to-t from-purple-900/95 via-purple-900/70 to-purple-900/40" />
 							<div className="absolute inset-0 p-10 flex flex-col justify-end">
 								<h3 className="text-3xl font-bold text-white mb-4">Our Mission</h3>
-								<p className="text-white/90 leading-relaxed text-lg">To create extraordinary event experiences that exceed expectations, foster meaningful connections, and leave lasting impressions. We are committed to bringing our clients visions to life through innovative design, flawless execution, and unwavering dedication to excellence.</p>
+								<p className="text-white/90 leading-relaxed text-lg">To create memorable event experiences that exceed expectations, foster meaningful connections, and leave lasting impressions. We are committed to bringing our clients visions to life through innovative design and reliable execution.</p>
 							</div>
 						</motion.div>
 
@@ -291,11 +289,10 @@ export default function AboutUsClient() {
 					<div className="grid lg:grid-cols-2 gap-16 items-center">
 						<motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
 							<div className="inline-flex items-center gap-3 bg-[var(--brand-purple)] px-5 py-2.5 rounded-full mb-6">
-								<Star className="text-white" size={20} />
 								<span className="text-base font-bold text-white uppercase tracking-wide">Why Choose Us</span>
 							</div>
 							<h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">The Laza Events Difference</h2>
-							<p className="text-gray-600 text-lg mb-10">When you partner with us, youre not just hiring an event planner—youre gaining a dedicated team committed to making your vision a reality.</p>
+							<p className="text-gray-600 text-lg mb-10">When you partner with us, youre gaining a dedicated team committed to making your event a success.</p>
 
 							<div className="grid sm:grid-cols-2 gap-6">
 								{whyChooseUs.map((item, i) => (
@@ -362,11 +359,10 @@ export default function AboutUsClient() {
 				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
 					<motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
 						<div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-							<Sparkles className="text-white" size={16} />
-							<span className="text-sm font-semibold text-white">Lets Create Together</span>
+							<span className="text-sm font-semibold text-white">Lets Work Together</span>
 						</div>
-						<h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Start Your Event Journey?</h2>
-						<p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto">Partner with Qatars premier event management team and experience the difference that passion, precision, and expertise make.</p>
+						<h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Plan Your Event?</h2>
+						<p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto">Partner with our experienced event management team to ensure your next event is a success.</p>
 						<div className="flex flex-wrap items-center justify-center gap-4">
 							<a href="tel:+97470694883" className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-[var(--brand-purple)] font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
 								Call +974 7069 4883

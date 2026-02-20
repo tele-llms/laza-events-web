@@ -91,7 +91,7 @@ export default function CorporateEventsClient({ recentWork }: { recentWork: Reac
               <div className="text-xs font-semibold tracking-[0.22em] uppercase text-[var(--brand-purple)]">Why choose us</div>
               <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-gray-900">End-to-end excellence</h2>
               <p className="mt-4 text-gray-600 text-lg leading-relaxed mb-8">
-                We handle every aspect of your corporate event, ensuring a seamless experience from concept to completion.
+                We handle every aspect of your corporate event, ensuring a smooth experience from concept to completion.
               </p>
               <ul className="space-y-4">
                 {features.map((feature, i) => (
@@ -144,7 +144,7 @@ export default function CorporateEventsClient({ recentWork }: { recentWork: Reac
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Ready to elevate your next corporate event?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Ready to plan your next corporate event?</h2>
             <p className="mt-4 text-white/80 text-lg">Call, WhatsApp, or email us — we&apos;ll respond quickly.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a href="tel:+97470694883" className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-[var(--brand-purple)] font-semibold shadow hover:bg-gray-100 transition-colors">
