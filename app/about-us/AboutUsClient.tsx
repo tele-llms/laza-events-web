@@ -47,7 +47,7 @@ const values = [
 
 const timeline = [
 	{
-		year: '2014',
+		year: '2017',
 		title: 'The Beginning',
 		desc: 'Laza Events was founded with a vision to revolutionize event management in Qatar.',
 	},
@@ -95,7 +95,7 @@ export default function AboutUsClient() {
 			<PageHeader
 				kicker="Who We Are"
 				title="About Laza Events"
-				subtitle="Qatars premier event management agency, dedicated to crafting unforgettable experiences through creativity, precision, and passion since 2014."
+				subtitle="Qatars premier event management agency, dedicated to crafting unforgettable experiences through creativity, precision, and passion since 2017."
 				breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
 			/>
 
@@ -109,7 +109,7 @@ export default function AboutUsClient() {
 							</div>
 							<h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">Delivering High-Quality Event Experiences</h2>
 							<div className="space-y-5 text-gray-600 leading-relaxed text-lg">
-								<p>Founded in 2014, Laza Events began with a clear goal: to deliver high-quality event experiences in Qatar. What started as a passionate team of three has grown into a full-service event management company.</p>
+								<p>Founded in 2017, Laza Events began with a clear goal: to deliver high-quality event experiences in Qatar. What started as a passionate team of three has grown into a full-service event management company.</p>
 								<p>We understand that every event is unique. Whether its a milestone corporate celebration, an elegant wedding, an engaging stage show, or a community festival that brings people together—our goal is to make it memorable and successful.</p>
 								<p>Our team combines deep local expertise with global standards, ensuring that every project is culturally resonant yet world-class in execution. Weve had the privilege of working with some of Qatars most prestigious organizations and individuals.</p>
 								<p>From the historic FIFA World Cup 2022 to intimate private gatherings, weve proven time and again that our strong commitment to quality makes a difference.</p>

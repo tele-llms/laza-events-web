@@ -148,7 +148,8 @@ export const metadata: Metadata = {
     ],
     "sameAs": [
       "https://instagram.com/laza_events_official",
-      "https://facebook.com/lazaevents"
+      "https://www.facebook.com/profile.php?id=61579970287675",
+      "https://www.youtube.com/@Lazaevent"
     ]
   };export default function RootLayout({
   children,

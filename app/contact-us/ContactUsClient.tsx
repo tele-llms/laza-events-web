@@ -87,10 +87,10 @@ export default function ContactUsClient() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">Lets Plan Your Next Event</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+97470694883" className="btn-primary-white">
+            <a href="tel:+97470694883" className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-[var(--brand-purple)] font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
               Call Now
             </a>
-            <a href="mailto:info@lazaevent.com" className="btn-outline">
+            <a href="mailto:info@lazaevent.com" className="inline-flex items-center justify-center rounded-xl border-2 border-white px-8 py-4 text-white font-semibold hover:bg-white/10 transition-all duration-300">
               Email Us
             </a>
           </div>

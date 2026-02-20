@@ -42,14 +42,18 @@ export default function Footer() {
                 <Instagram size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61579970287675"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[var(--brand-purple)] transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@Lazaevent"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[var(--brand-purple)] transition-colors"
                 aria-label="YouTube"
               >
